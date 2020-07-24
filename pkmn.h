@@ -1,23 +1,8 @@
 #ifndef __pkmn_h_
 #define __pkmn_h_
 #include "structures.h"
-class Item {
-    public:
-    Item();
-    private:
-    string ItemName;
-    string desc;
-    string pocketType;
-};
-class HealItem : public Item {
-    public:
-    HealItem();
-    void Use(Individual &pokemon);
+#include "items.h"
 
-    private:
-    int healAmount;
-    vector<Status> canCure;
-};
 class Type {
     public:
     string TypeName;
