@@ -27,7 +27,9 @@ class Move {
 };
 class Pokemon {
     public:
+        Pokemon(std::map<std::string, std::vector<std::string> >& facts);
     bool BreedCheck(Pokemon mate);
+    void getMoves(std::map<int, std::string>);
     Pokemon EvolvesFrom;
     Pokemon EvolvesTo;
     map<int,Move> moveset;
@@ -39,9 +41,12 @@ class Pokemon {
     int hatchCount;
     int baseFriendship;
     int idNum;
+    float height;
+    float weight;
     int genderDistribution;
     string DexEntry;
     string species;
+    string name;
     string color;
     string bodyStyle;
     Type type1;
@@ -49,6 +54,8 @@ class Pokemon {
     bool isMonoType;
 
     vector<int> baseStats;
+    vector<int> abilities;
+    vector<int> evYield;
 };
 class Individual : public Pokemon {
     public:
