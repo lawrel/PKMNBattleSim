@@ -25,7 +25,7 @@ Pokemon::Pokemon(const map<string, vector<string> >& facts) {
 		} else if(itr->first=="baseFriendship") {
 			baseFriendship = stoi(itr->second[0]);
 		} else if (itr->first=="expGroup") {
-			growthPattern = stoi(itr->second[0]);
+			expGroup = stoi(itr->second[0]);
 		} else if (itr->first=="color") {
 			color = itr->second[0];
 		} else if (itr->first=="bodyStyle") {
@@ -82,7 +82,8 @@ bool Individual::BreedCheck(Individual mate) {
 	if (EggGroup1=="Undiscovered"||EggGroup2=="Undiscovered"||
 	mate.EggGroup1=="Undiscovered"||mate.EggGroup2=="Undiscovered") {
 		return false;
-	} else if (EggGroup1=="Ditto"||mate.EggGroup1=="Ditto") {
+	}
+	else if (EggGroup1=="Ditto"||mate.EggGroup1=="Ditto") {
 		if(EggGroup1==mate.EggGroup1) {return false;}
 		return true;
 	}

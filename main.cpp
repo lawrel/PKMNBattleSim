@@ -10,8 +10,13 @@
 #include <iomanip>
 #include "pokemon.h"
 
+/*PKMN INFO ORDER: idNum, name, species, [types], [abilities], genderThreshold, catchRate,
+[eggGroups], hatchCounter, height, weight, expYield, baseFriendship, expgroup, [evYield],
+bodyStyle, color, [baseStats], dexEntry, EvolvesFrom, EvolvesTo, [compatibleTMs], [ lvl: moves ]
+[eggMoves], FormeName
+*/
 bool ReadPkmnInfo(std::istream& istr, std::map<std::string, std::vector<std::string> >& facts) {
-    std::string token1, token2;
+    std::string token, token2;
     char c;
     bool valid = false;
     facts.clear();
