@@ -13,6 +13,7 @@
 #include <iomanip>
 using namespace std;
 
+
 enum Status {
     PARALYZE,
     POISONE,
@@ -34,7 +35,7 @@ enum Status {
     CHARGING,
     RECHARGING,
     OK
-}
+};
 enum Weather {
     CLEAR,
     RAIN,
@@ -44,4 +45,36 @@ enum Weather {
     STRONG_WIND,
     STRONG_RAIN,
     STRONG_SUN
-}
+};
+class pkmnType {
+  public:
+    pkmnType();
+    pkmnType(map<string, vector<string>>);
+    string name;
+    vector<string> weakTo;
+    vector<string> resistantTo;
+    vector<string> ineffective;
+    bool isWeakTo(string type);
+    bool isResistant(string type);
+    bool isIneffective(string type);
+};
+
+class Move {
+    public:
+      Move();
+    private:
+    string type;
+    string desc;
+    string move_type; //phys, spec, or none
+    int power;
+    int accuracy;
+    Status statusEffect;
+    int statusChance;
+    Weather weatherEffect;
+    int weatherChance;
+};
+class Constants {
+  map<string, pkmnType> typeDex;
+  map<string, Move> moveDex;
+};
+#endif

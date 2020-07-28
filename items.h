@@ -1,4 +1,6 @@
-#include "pokemon.h"
+#ifndef __items_h_
+#define __items_h_
+#include "pkmn.h"
 
 class Item {
     public:
@@ -20,11 +22,11 @@ class HealItem : public Item {
 class TM : public Item {
     public:
     TM();
-    
+
     private:
     Move move;
     int moveNo;
-}
+};
 class Bag {
     public:
     void insertItem(Item item);
@@ -39,4 +41,5 @@ class Bag {
     vector<Item> HeldItems;
     vector<Item> Pokeballs;
     vector<Item> Berries;
-}
+};
+#endif

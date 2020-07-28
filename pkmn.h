@@ -1,37 +1,19 @@
 #ifndef __pkmn_h_
 #define __pkmn_h_
 #include "structures.h"
-#include "items.h"
 
-class Type {
-    public:
-    string TypeName;
-    vector<string> weakTo;
-    vector<string> resistantTo;
-    vector<string> ineffective;
-    bool isWeakTo(string type);
-    bool isResistant(string type);
-    bool isIneffective(string type);
-};
-class Move {
-    public:
-    void doAttack(Individual &attacker, Individual &defender);
 
-    private:
-    Type type;
-    string desc;
-    string move_type; //phys, spec, or none
-    int power;
-    int accuracy;
-    Status statusEffect;
-};
 class Pokemon {
     public:
-        Pokemon(std::map<std::string, std::vector<std::string> >& facts);
-    bool BreedCheck(Pokemon mate);
-    void getMoves(std::map<int, std::string>);
-    Pokemon EvolvesFrom;
-    Pokemon EvolvesTo;
+        Pokemon(const map<string, vector<string> >& facts);
+        Pokemon();
+        Pokemon(Pokemon& old);
+        string getType1() {return type1; }
+        string getType2() {return type2; }
+
+
+    int EvolvesFrom;
+    int EvolvesTo;
     map<int,Move> moveset;
     vector<Move> compatibleTMs;
     vector<Move> eggMoves;
@@ -49,28 +31,38 @@ class Pokemon {
     string name;
     string color;
     string bodyStyle;
-    Type type1;
-    Type type2;
+    string type1;
+    string type2;
+    string EggGroup1;
+    string EggGroup2;
     bool isMonoType;
-
+private:
     vector<int> baseStats;
     vector<int> abilities;
     vector<int> evYield;
 };
 class Individual : public Pokemon {
     public:
-    Individual(vector<string> info);;
+    Individual(vector<string> info);
+    Individual(Pokemon spec, int min, int max);
     Individual();
     Individual(Individual &old);
 
+    string getName() {return nname;}
+    void nickname(string newName) {nname = newName;}
     int getCurrHealth() { return currHealth;}
-
+    bool BreedCheck(Individual mate);
     void ExpGain(Individual enemy);
     void levelUp();
+    void Evolve();
     void attacked(int damage);
-    void heal();
+    void heal(int healnum);
+    int performAttack(Move move);
+    float getEggChance(Individual mate, bool OvalCharm);
 
     private:
+    string nname;
+    int OT;
     int currHealth;
     int maxHealth;
     int earnedExp;
@@ -83,3 +75,4 @@ class Individual : public Pokemon {
     vector<int> evs;
     vector<int> ivs;
 };
+#endif
