@@ -1,4 +1,7 @@
 # Pokemon Battle Simulator
+Text based simulation of Pokemon battling. Read in pokemon, moveset, move, and item data from txt files.
+Breeding, with egg moves & proper 
+Intended to be the base for a larger project that hopefully one day has a GUI.
 
 ## Goals  
 +type matchups  
@@ -8,10 +11,10 @@
 +healing items  
 +held item effects  
 +navigable bag
-+full party of pokemon
++full party of 6 pokemon  
++randomly generate enemy/wild pokemon from pokedex data & specified level range  
++abilities
 
 ## Data
 
-+move format:  name, type, phys/spec/none, power, "description", status, weather   
-+status effects will be hard coded  
-+type matchups: type1, [weaknesses], [resistances], [ineffective]
+There is a very unfortunate problem with moves and abilities - their effects are practically boundless, meaning many of them will need to be hardcoded (Trick Room). Most basic attacking and stat-boosting moves will avoid this issue.
