@@ -1,72 +1,67 @@
 #include "pkmn.h"
 
-Pokemon::Pokemon(const map<string, vector<string> >& facts) {
-	map<string, vector<string> >::const_iterator itr = facts.begin();
+Pokemon::Pokemon(const map<string,vector<string> >& facts) {
+	map<string,vector<string> >::const_iterator itr = facts.begin();
 	//read in the map and grab variables if they exist
-	for (; itr != facts.end(); itr++) {
-		if (itr->first=="id") {
+	for(;itr!=facts.end();itr++) {
+		if(itr->first=="id") {
 			idNum = stoi(itr->second[0]);
 		} else if (itr->first=="label") {
 			name = itr->second[0];
 		} else if (itr->first=="species") {
 			species = itr->second[0];
 		} else if (itr->first=="genderThreshold") {
-			genderDistribution = stoi(itr->second[0]);
+			genderDistribution= stoi(itr->second[0]);
 		} else if (itr->first=="catchRate") {
 			catchRate = stoi(itr->second[0]);
 		} else if (itr->first=="hatchCounter") {
 			hatchCount = stoi(itr->second[0]);
-		} else if(itr->first=="height") {
-			height = stoi(itr->second[0]);
+		} else if (itr->first=="height") {
+			height = stof(itr->second[0]);
 		} else if (itr->first=="weight") {
-			weight = stoi(itr->second[0]);
+			weight = stof(itr->second[0]);
 		} else if (itr->first=="baseExpYield") {
 			expYield = stoi(itr->second[0]);
-		} else if(itr->first=="baseFriendship") {
+		} else if (itr->first=="baseFriendship") {
 			baseFriendship = stoi(itr->second[0]);
 		} else if (itr->first=="expGroup") {
-			expGroup = stoi(itr->second[0]);
+			growthPattern = stoi(itr->second[0]);
 		} else if (itr->first=="color") {
 			color = itr->second[0];
-		} else if (itr->first=="bodyStyle") {
-			bodyStyle = itr->second[0];
-		} else if (itr->first=="baseStats") {
-			for (int i = 0; (itr->second).size(); i++) {
-				baseStats.push_back(stoi(itr->second[i]));
-			}
-		} else if (itr->first=="eggGroups") {
-			if (itr->second.size()==1) {
-				EggGroup1 = itr->second[0];
-				EggGroup2 = itr->second[0];
-			} else if (itr->second.size()==2) {
-				EggGroup1 = itr->second[0];
-				EggGroup2 = itr->second[1];
-			} else {
-				perror("ERROR: Incorrect egg group information provided");
-			}
 		} else if (itr->first=="types") {
-			if (itr->second.size()==1) {
-				type1 = itr->second[0];
-				type2 = itr->second[0];
-				isMonoType = true;
-			} else if (itr->second.size()==2) {
-				type1 = itr->second[0];
+			type1 = itr->second[0];
+			if ((itr->second).size()==2) {
 				type2 = itr->second[1];
-				isMonoType = false;
-			} else {
-				perror("ERROR: incorrect type information provided");
-			}
-		} else if (itr->first=="evYield") {
-			for (int i = 0; (itr->second).size(); i++) {
-				evYield.push_back(stoi(itr->second[i]));
-			}
+			} else {type2 = itr->second[0];}
 		} else if (itr->first=="abilities") {
-			for (int i = 0; (itr->second).size(); i++) {
+			for (size_t i = 0; i < itr->second.size(); i++) {
 				abilities.push_back(stoi(itr->second[i]));
 			}
+		} else if (itr->first=="eggGroups") {
+			EggGroup1 = itr->second[0];
+			if ((itr->second).size()==2) {
+				EggGroup2 = itr->second[1];
+			} else {EggGroup2 = itr->second[0];}
+		} else if (itr->first=="evYield") {
+			for (size_t i = 0; i < itr->second.size(); i++) {
+				evYield.push_back(stoi(itr->second[i]));
+			}
+		} else if (itr->first=="baseStats") {
+			for (size_t i = 0; i < itr->second.size(); i++) {
+				baseStats.push_back(stoi(itr->second[i]));
+			}
+		} else if (itr->first=="bodyStyle") {
+			bodyStyle = itr->second[0];
 		}
-
 	}
+}
+Pokemon::Pokemon() {
+
+}
+void Pokemon::printPkmnData() {
+	printf("#%d: %s the %s Pokemon\n", idNum, name.c_str(), species.c_str());
+	printf("worm\n");
+
 }
 //USAGE: Create random individual of pokemon species
 Individual::Individual(Pokemon spec, int min, int max) {

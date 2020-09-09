@@ -5,12 +5,12 @@
 
 class Pokemon {
     public:
-        Pokemon(const map<string, vector<string> >& facts);
+        Pokemon(const map<string,vector<string> >& facts);
         Pokemon();
-        Pokemon(Pokemon& old);
+        //Pokemon(Pokemon& old);
         string getType1() {return type1; }
         string getType2() {return type2; }
-
+        void printPkmnData();
 
     int EvolvesFrom;
     int EvolvesTo;
@@ -46,7 +46,7 @@ class Individual : public Pokemon {
     Individual(vector<string> info);
     Individual(Pokemon spec, int min, int max);
     Individual();
-    Individual(Individual &old);
+    //Individual(Individual &old);
 
     string getName() {return nname;}
     void nickname(string newName) {nname = newName;}

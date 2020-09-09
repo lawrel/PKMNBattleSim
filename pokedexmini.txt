@@ -1,0 +1,200 @@
+{
+	id : 191
+	label : Sunkern
+	species : Seed
+	types : [ Grass ]
+	abilities : [ 17 144 34 ]
+	genderThreshold : 127
+	catchRate : 235
+	eggGroups : [ Grass ]
+	hatchCounter : 20
+	height : 0.300000
+	weight : 1.800000
+	baseExpYield : 36
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 1 0 0 ]
+	bodyStyle : "Pokemon consisting only of a head"
+	color : Yellow
+	baseStats : [ 30 30 30 30 30 30 ]
+}
+{
+	id : 192
+	label : Sunflora
+	species : Sun
+	types : [ Grass ]
+	abilities : [ 17 144 34 ]
+	genderThreshold : 127
+	catchRate : 120
+	eggGroups : [ Grass ]
+	hatchCounter : 20
+	height : 0.800000
+	weight : 8.500000
+	baseExpYield : 149
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 2 0 0 ]
+	bodyStyle : "Pokemon with a bipedal tailless form"
+	color : Yellow
+	baseStats : [ 75 75 55 105 85 30 ]
+}
+{
+	id : 363
+	label : Spheal
+	species : Clap
+	types : [ Ice Water ]
+	abilities : [ 168 62 100 ]
+	genderThreshold : 127
+	catchRate : 255
+	eggGroups : [ Water1 Field ]
+	hatchCounter : 20
+	height : 0.800000
+	weight : 39.500000
+	baseExpYield : 58
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 1 0 0 0 0 0 ]
+	bodyStyle : "Pokemon with fins"
+	color : Blue
+	baseStats : [ 70 40 50 55 50 25 ]
+}
+{
+	id : 364
+	label : Sealeo
+	species : BallRoll
+	types : [ Ice Water ]
+	abilities : [ 168 62 100 ]
+	genderThreshold : 127
+	catchRate : 120
+	eggGroups : [ Water1 Field ]
+	hatchCounter : 20
+	height : 1.100000
+	weight : 87.600000
+	baseExpYield : 144
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 2 0 0 0 0 0 ]
+	bodyStyle : "Pokemon with fins"
+	color : Blue
+	baseStats : [ 90 60 70 75 70 45 ]
+}
+{
+	id : 365
+	label : Walrein
+	species : IceBreak
+	types : [ Ice Water ]
+	abilities : [ 168 62 100 ]
+	genderThreshold : 127
+	catchRate : 45
+	eggGroups : [ Water1 Field ]
+	hatchCounter : 20
+	height : 1.400000
+	weight : 150.600000
+	baseExpYield : 239
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 3 0 0 0 0 0 ]
+	bodyStyle : "Pokemon with a quadruped body"
+	color : Blue
+	baseStats : [ 110 80 90 95 90 65 ]
+}
+{
+	id : 390
+	label : Chimchar
+	species : Chimp
+	types : [ Fire ]
+	abilities : [ 14 0 72 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Field HumanLike ]
+	hatchCounter : 20
+	height : 0.500000
+	weight : 6.200000
+	baseExpYield : 62
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 0 0 1 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Brown
+	baseStats : [ 44 58 44 58 44 61 ]
+}
+{
+	id : 391
+	label : Monferno
+	species : Playful
+	types : [ Fire Fighting ]
+	abilities : [ 14 0 72 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Field HumanLike ]
+	hatchCounter : 20
+	height : 0.900000
+	weight : 22.000000
+	baseExpYield : 142
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 1 0 1 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Brown
+	baseStats : [ 64 78 52 78 52 81 ]
+}
+{
+	id : 392
+	label : Infernape
+	species : Flame
+	types : [ Fire Fighting ]
+	abilities : [ 14 0 72 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Field HumanLike ]
+	hatchCounter : 20
+	height : 1.200000
+	weight : 55.000000
+	baseExpYield : 240
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 1 0 1 0 1 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Brown
+	baseStats : [ 76 104 71 104 71 108 ]
+}
+{
+	id : 698
+	label : Amaura
+	species : Tundra
+	types : [ Rock Ice ]
+	abilities : [ 120 0 143 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Monster ]
+	hatchCounter : 30
+	height : 1.300000
+	weight : 25.200000
+	baseExpYield : 72
+	baseFriendship : 70
+	expGroup : 2
+	evYield : [ 1 0 0 0 0 0 ]
+	bodyStyle : "Pokemon with a quadruped body"
+	color : Blue
+	baseStats : [ 77 59 50 67 63 46 ]
+}
+{
+	id : 699
+	label : Aurorus
+	species : Tundra
+	types : [ Rock Ice ]
+	abilities : [ 120 0 143 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Monster ]
+	hatchCounter : 30
+	height : 2.700000
+	weight : 225.000000
+	baseExpYield : 104
+	baseFriendship : 70
+	expGroup : 2
+	evYield : [ 2 0 0 0 0 0 ]
+	bodyStyle : "Pokemon with a quadruped body"
+	color : Blue
+	baseStats : [ 123 77 72 99 92 58 ]
+}
