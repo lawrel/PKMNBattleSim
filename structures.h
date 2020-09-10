@@ -46,24 +46,56 @@ enum Weather {
     STRONG_RAIN,
     STRONG_SUN
 };
-class pkmnType {
-  public:
-    pkmnType();
-    pkmnType(map<string, vector<string>>);
-    string name;
-    vector<string> weakTo;
-    vector<string> resistantTo;
-    vector<string> ineffective;
-    bool isWeakTo(string type);
-    bool isResistant(string type);
-    bool isIneffective(string type);
+enum Type {
+  NORMAL = 0,
+  FIGHTING,
+  FLYING,
+  POISON,
+  GROUND,
+  ROCK,
+  BUG,
+  GHOST,
+  STEEL,
+  FIRE,
+  WATER,
+  GRASS,
+  ELECTRIC,
+  PSYCHIC,
+  ICE,
+  DRAGON,
+  DARK,
+  FAIRY,
+  NONE
 };
+float rawData[18][18] = {
+  {1,  1,  1,  1,  1,0.5,  1,  0,0.5,  1,  1,  1,  1,  1,  1,  1,  1,  1}, //NORMAL
+  {2,  1,0.5,0.5,  1,  2,0.5,  0,  2,  1,  1,  1,  1,0.5,  2,  1,  2,0.5}, //FIGHTING
+  {1,  2,  1,  1,  1,0.5,  2,  1,0.5,  1,  1,  2,0.5,  1,  1,  1,  1,  1}, //FLYING
+  {1,  1,  1,0.5,0.5,0.5,  1,0.5,  0,  1,  1,  2,  1,  1,  1,  1,  1,  2}, //POISON
+  {1,  1,  0,  2,  1,  2,0.5,  1,  2,  2,  1,0.5,  2,  1,  1,  1,  1,  1},//GROUND
+  {1,0.5,  2,  1,0.5,  1,  2,  1,0.5,  2,  1,  1,  1,  1,  2,  1,  1,  1}, //ROCK
+  {1,0.5,0.5,0.5,  1,  1,  1,0.5,0.5,0.5,  1,  2,  1,  2,  1,  1,  2,0.5}, //BUG
+  {0,  1,  1,  1,  1,  1,  1,  2,  1,  1,  1,  1,  1,  2,  1,  1,0.5,  1}, //GHOST
+  {1,  1,  1,  1,  1,  2,  1,  1,0.5,0.5,0.5,  1,0.5,  1,  2,  1,  1,  2}, //STEEL
+  {1,  1,  1,  1,  1,0.5,  2,  1,  2,0.5,0.5,  2,  1,  1,  2,0.5,  1,  1}, //FIRE
+  {1,  1,  1,  1,  2,  2,  1,  1,  1,  2,0.5,0.5,  1,  1,  1,0.5,  1,  1}, //WATER
+  {1,  1,0.5,0.5,  2,  2,0.5,  1,0.5,0.5,  2,0.5,  1,  1,  1,0.5,  1,  1}, //GRASS
+  {1,  1,  2,  1,  0,  1,  1,  1,  1,  1,  2,0.5,0.5,  1,  1,0.5,  1,  1},//ELECTRIC
+  {1,  2,  1,  2,  1,  1,  1,  1,0.5,  1,  1,  1,  1,0.5,  1,  1,  0,  1}, //PSYCHIC
+  {1,  1,  2,  1,  2,  1,  1,  1,0.5,0.5,0.5,  2,  1,  1,0.5,  2,  1,  1},//ICE
+  {1,  1,  1,  1,  1,  1,  1,  1,0.5,  1,  1,  1,  1,  1,  1,  2,  1,  0},//DRAGON
+  {1,0.5,  1,  1,  1,  1,  1,  2,  1,  1,  1,  1,  1,  2,  1,  1,0.5,0.5}, //DARK
+  {1,  2,  1,0.5,  1,  1,  1,  1,0.5,0.5,  1,  1,  1,  1,  1,  2,  2,  1} //FAIRY
+};
+
+float calculateMatchup(Type attack, Type type1, Type type2);
+Type getTypeFromString(string const& input);
 
 class Move {
     public:
       Move();
     private:
-    string type;
+    Type type;
     string desc;
     string move_type; //phys, spec, or none
     int power;
@@ -74,7 +106,6 @@ class Move {
     int weatherChance;
 };
 class Constants {
-  map<string, pkmnType> typeDex;
   map<string, Move> moveDex;
 };
 #endif

@@ -15,43 +15,6 @@
 bodyStyle, color, [baseStats], dexEntry, EvolvesFrom, EvolvesTo, [compatibleTMs], [ lvl: moves ]
 [eggMoves], FormeName
 */
-bool ReadPkdex(istream& istr, vector<vector<string> >& facts) {
- bool valid = false;
- string token, token2;
- int i = 0;
- //char c;
- facts.clear();
- while (istr >> token) {
-   if (token == "{") {
-       assert(valid == false);
-       valid = true;
-   } else if (token == "}") {
-       assert(valid == true);
-       return true;
-   } else {
-       istr >> token2;
-       if(token2 == ":"){
-       istr >> token2;
-       if (token2 == "[") {
-         while (istr >> token2) {
-             if (token2 == "]") {
-                 break;
-             }
-             facts[i].push_back(token2);
-         }
-         assert(facts[i].size() > 0);
-         i++;
-       } else {
-         facts[i].push_back(token2);
-         assert(facts[i].size() == 1);
-         i++;
-       }
-     }
-   }
-
-}
- return valid;
-}
 bool ReadPkmnInfo(std::istream& istr, std::map<std::string, std::vector<std::string> >& facts) {
     std::string token, token2;
     char c;

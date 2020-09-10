@@ -3,6 +3,14 @@
 #include "pkmn.h"
 
 class Pokedex {
-  map<int, Pokemon> pkDex;
+  public:
+    Pokedex();
+    ~Pokedex();
+    int addEntry(int id, Pokemon &pkmn);
+    Pokemon* getEntry(string name);
+    Pokemon* getEntry(int id);
+    void outputEntry(Pokemon &pkmn);
+  private:
+    map<int, Pokemon> *pkDex;
 };
 #endif

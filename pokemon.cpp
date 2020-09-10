@@ -29,10 +29,10 @@ Pokemon::Pokemon(const map<string,vector<string> >& facts) {
 		} else if (itr->first=="color") {
 			color = itr->second[0];
 		} else if (itr->first=="types") {
-			type1 = itr->second[0];
+			type1 = getTypeFromString(itr->second[0]);
 			if ((itr->second).size()==2) {
-				type2 = itr->second[1];
-			} else {type2 = itr->second[0];}
+				type2 = getTypeFromString(itr->second[1]);
+			} else {type2 = getTypeFromString(itr->second[0]);}
 		} else if (itr->first=="abilities") {
 			for (size_t i = 0; i < itr->second.size(); i++) {
 				abilities.push_back(stoi(itr->second[i]));

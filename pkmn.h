@@ -8,8 +8,8 @@ class Pokemon {
         Pokemon(const map<string,vector<string> >& facts);
         Pokemon();
         //Pokemon(Pokemon& old);
-        string getType1() {return type1; }
-        string getType2() {return type2; }
+      //  string getType1();
+      //  string getType2();
         void printPkmnData();
 
     int EvolvesFrom;
@@ -31,8 +31,8 @@ class Pokemon {
     string name;
     string color;
     string bodyStyle;
-    string type1;
-    string type2;
+    Type type1;
+    Type type2;
     string EggGroup1;
     string EggGroup2;
     bool isMonoType;
