@@ -5,7 +5,7 @@
 
 class Pokemon {
     public:
-        Pokemon(const map<string, vector<string> >& facts);
+        Pokemon(const vector<vector<string> >& facts);
         Pokemon();
         Pokemon(Pokemon& old);
         string getType1() {return type1; }

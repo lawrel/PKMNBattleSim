@@ -60,8 +60,6 @@ Pokemon::Pokemon() {
 }
 void Pokemon::printPkmnData() {
 	printf("#%d: %s the %s Pokemon\n", idNum, name.c_str(), species.c_str());
-	printf("worm\n");
-
 }
 //USAGE: Create random individual of pokemon species
 Individual::Individual(Pokemon spec, int min, int max) {
