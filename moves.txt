@@ -1,0 +1,144 @@
+{
+  name : "Struggle"
+  power : 50
+  accuracy : 999
+  type : ???
+  atktype : physical
+  description : "This attack is used in desperation only if the user has no PP. It also damages the user a little."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0.50
+  PP : 999
+  TM : 0
+}
+{
+  name : "Tackle"
+  power : 40
+  accuracy : 100
+  type : Normal
+  atktype : physical
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 35
+  TM : 0
+}
+{
+  name : "Agility"
+  power : 0
+  accuracy : 999
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 2 0 0 ]
+  modchance : 0
+  target : self
+  recoil : 0
+  PP : 30
+  TM : 0
+}
+{
+  name : "Hidden Power"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 0
+}
+{
+  name : "Attract"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 45
+}
+{
+  name : "Confide"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 100
+}
+{
+  name : "Facade"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 42
+}
+{
+  name : "Rest"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 44
+}

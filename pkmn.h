@@ -74,5 +74,6 @@ class Individual : public Pokemon {
     vector<int> currStats;
     vector<int> evs;
     vector<int> ivs;
+    Nature nature;
 };
 #endif
