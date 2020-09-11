@@ -6,11 +6,14 @@ class Pokedex {
   public:
     Pokedex();
     ~Pokedex();
-    int addEntry(int id, Pokemon &pkmn);
+    int addEntry(Pokemon &pkmn);
     Pokemon* getEntry(string name);
     Pokemon* getEntry(int id);
     void outputEntry(Pokemon &pkmn);
+    void sortbyName();
+    void sortbyColor();
+
   private:
-    map<int, Pokemon> *pkDex;
+    vector<Pokemon*>* pkDex;
 };
 #endif

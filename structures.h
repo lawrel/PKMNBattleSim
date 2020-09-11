@@ -67,7 +67,7 @@ enum Type {
   FAIRY,
   NONE
 };
-float rawData[18][18] = {
+const float rawData[18][18] = {
   {1,  1,  1,  1,  1,0.5,  1,  0,0.5,  1,  1,  1,  1,  1,  1,  1,  1,  1}, //NORMAL
   {2,  1,0.5,0.5,  1,  2,0.5,  0,  2,  1,  1,  1,  1,0.5,  2,  1,  2,0.5}, //FIGHTING
   {1,  2,  1,  1,  1,0.5,  2,  1,0.5,  1,  1,  2,0.5,  1,  1,  1,  1,  1}, //FLYING
@@ -87,9 +87,11 @@ float rawData[18][18] = {
   {1,0.5,  1,  1,  1,  1,  1,  2,  1,  1,  1,  1,  1,  2,  1,  1,0.5,0.5}, //DARK
   {1,  2,  1,0.5,  1,  1,  1,  1,0.5,0.5,  1,  1,  1,  1,  1,  2,  2,  1} //FAIRY
 };
-
+const string typeNames[19] = {"Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug",
+  "Ghost","Steel","Fire","Water","Grass","Electric","Psychic","Ice","Dragon","Dark","Fairy","???"};
 float calculateMatchup(Type attack, Type type1, Type type2);
 Type getTypeFromString(string const& input);
+string outputType(Type type);
 
 class Move {
     public:

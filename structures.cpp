@@ -1,9 +1,11 @@
 #include "structures.h"
 
 float calculateMatchup(Type attack, Type type1, Type type2) {
-  float val = 1;
   if (attack == NONE) {
-    return val;
+    return 1;
+  }
+  if (type1==type2) {
+    return rawData[attack][type1];
   }
   return rawData[attack][type1]*rawData[attack][type2];
 }
@@ -28,3 +30,4 @@ Type getTypeFromString(string const& input) {
   if(input=="Fairy") return FAIRY;
   return NONE;
 }
+string outputType(Type type) {return typeNames[type];}

@@ -15,8 +15,44 @@
 bodyStyle, color, [baseStats], dexEntry, EvolvesFrom, EvolvesTo, [compatibleTMs], [ lvl: moves ]
 [eggMoves], FormeName
 */
-bool ReadPkmnInfo(std::istream& istr, std::map<std::string, std::vector<std::string> >& facts) {
-    std::string token, token2;
+bool ReadMoveInfo(istream& istr, map<string, vector<string> >& facts ) {
+  string token,token2;
+  bool valid = false;
+  facts.clear();
+  while(istr>>token) {
+    if (token == "{") {
+        assert(valid == false);
+        valid = true;
+      }
+      else if (token == "}") {
+        assert(valid == true);
+        return true;
+      }
+      else {
+        istr>>token2;
+        assert(token2 == ":");
+        if (token=="name") {
+          istr >> token2;
+          facts[token].push_back(token2);
+          assert(facts[token].size() == 1);
+        }
+        else if (token=="statmods") {
+          istr >> token2;
+          assert(token2 == "[");
+          while (istr >> token2) {
+              if (token2 == "]") {
+                  break;
+              }
+              facts[token].push_back(token2);
+          }
+          assert(facts[token].size() > 0);
+        }
+      }
+    }
+    return false;
+}
+bool ReadPkmnInfo(istream& istr, map<string, vector<string> >& facts) {
+    string token, token2;
     char c;
     bool valid = false;
     facts.clear();
@@ -110,7 +146,7 @@ int main(int argc, char* argv[]) {
   }
   std::vector<Pokemon> pokemons;
   while (1) {
-    std::map<std::string,std::vector<std::string> > facts;
+    map<string,vector<string> > facts;
     if (!ReadPkmnInfo(istr,facts)) break;
     Pokemon p = Pokemon(facts);
     // add the new pokemon to the master container
@@ -118,6 +154,14 @@ int main(int argc, char* argv[]) {
   }
   for (size_t i = 0; i < pokemons.size(); i++) {
     pokemons[i].printPkmnData();
+    cout<<"Types: "<<outputType(pokemons[i].getType1())<<" "<<outputType(pokemons[i].getType2())<<endl;
   }
-    return 0;
+  cout<<"Fire type attack on Grass Type does x"<<calculateMatchup(FIRE, GRASS, GRASS)<<" damage"<<endl;
+  cout<<outputType(FIRE)<<" type attack on Grass/Bug Type does x"<<calculateMatchup(FIRE, GRASS, BUG)<<" damage"<<endl;
+  cout<<"Fire type attack on Water Type does x"<<calculateMatchup(FIRE, WATER, WATER)<<" damage"<<endl;
+  cout<<"Water type attack on Water/Dragon Type does x"<<calculateMatchup(WATER, WATER, DRAGON)<<" damage"<<endl;
+  cout<<"Normal type attack on Ghost/Water Type does x"<<calculateMatchup(NORMAL, GHOST, WATER)<<" damage"<<endl;
+  cout<<"Normal type attack on Ghost Type does x"<<calculateMatchup(NORMAL, GHOST, GHOST)<<" damage"<<endl;
+  cout<<outputType(NONE)<<" type attack on Grass/Bug Type does x"<<calculateMatchup(NONE, GRASS, BUG)<<" damage"<<endl;
+  return 0;
 }

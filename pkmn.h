@@ -8,8 +8,8 @@ class Pokemon {
         Pokemon(const map<string,vector<string> >& facts);
         Pokemon();
         //Pokemon(Pokemon& old);
-      //  string getType1();
-      //  string getType2();
+        Type getType1() {return type1;};
+        Type getType2() {return type2;};
         void printPkmnData();
 
     int EvolvesFrom;
