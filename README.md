@@ -18,12 +18,12 @@ Intended to be the base for a larger project that hopefully one day has custom 2
 +searchable pokedex
 
 ## COMPLETED
-+type matchups
-+egg groups
-+breeding calculations
-+pokemon through gen 6 (Normal Forme only)
-+Nature information
-+basic move framework 
++type matchups  
++egg groups  
++breeding calculations  
++pokemon through gen 6 (Normal Forme only)  
++Nature information  
++basic move framework   
 
 ## ISSUES
 There is a very unfortunate problem with moves and abilities - their effects are practically boundless, meaning many of them will need to be hardcoded (Trick Room). Most basic attacking and stat-boosting moves will avoid this issue.
