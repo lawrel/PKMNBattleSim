@@ -167,11 +167,28 @@
 }
 {
   name : "Hail"
+  power :
+  accuracy :
+  type :
+  atktype :
+  description : ""
+  effect :
+  effectchance :
+  weather :
+  weatherchance :
+  statmods : [  ]
+  modchance :
+  target :
+  PP :
   TM : 7
+  contact :
+  priority :
 }
 {
   name : "Bulk Up"
   TM : 8
+  contact :
+  priority :
 }
 {
   name : "Venoshock"

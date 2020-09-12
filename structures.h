@@ -137,7 +137,8 @@ class Move {
     private:
     Type type;
     string desc;
-    string move_type; //phys, spec, or none
+    string move_type; //phys, spec, environment or none
+    string target;
     int power;
     int accuracy;
     Status statusEffect;
@@ -145,8 +146,11 @@ class Move {
     Weather weatherEffect;
     int weatherChance;
     vector<int> statmods;
+    int modchance;
     float recoil;
     int pp;
+    int priority;
+    int contact;
 
 };
 class Nature {
