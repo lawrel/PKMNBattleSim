@@ -169,13 +169,13 @@
   name : "Hail"
   power :
   accuracy :
-  type :
+  type : Ice
   atktype :
   description : ""
   effect :
   effectchance :
-  weather :
-  weatherchance :
+  weather : HAIL
+  weatherchance : 100
   statmods : [  ]
   modchance :
   target :
@@ -187,20 +187,48 @@
 {
   name : "Bulk Up"
   TM : 8
+  power :
+  accuracy :
+  type :
+  atktype :
+  description : ""
+  effect :
+  effectchance :
+  weather :
+  weatherchance :
+  statmods : [  ]
+  modchance :
+  target :
+  PP :
   contact :
   priority :
 }
 {
   name : "Venoshock"
+   power :
+  accuracy :
+  type :
+  atktype :
+  description : ""
+  effect :
+  effectchance :
+  weather :
+  weatherchance :
+  statmods : [  ]
+  modchance :
+  target :
+  PP :
   TM : 9
+  contact : 
+  priority : 0 
 }
 {
   name : "Hidden Power"
-  power : 0
+  power : 60
   accuracy : 100
   type : Normal
-  atktype : status
-  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  atktype : special
+  description : "A unique attack that varies in type and intensity depending on the Pokémon using it."
   effect : OK
   effectchance : 0
   weather : CLEAR
@@ -209,27 +237,40 @@
   modchance : 0
   target : opponent
   recoil : 0
-  PP : 30
+  PP : 15
   TM : 10
+  contact : 0
+  priority : 0
 }
 {
   name : "Sunny Day"
+  description : ""
+  weather : SUNNY
+  weatherchance : 100
   TM : 11
 }
 {
   name : "Taunt"
+  description : ""
+  status : TAUNTED
+  statuschance : 100
   TM : 12
 }
 {
   name : "Ice Beam"
+  type : Ice
+  description : ""
   TM : 13
 }
 {
   name : "Blizzard"
+  type : Ice
+  description : ""
   TM : 14
 }
 {
   name : "Hyper Beam"
+  type : Normal
   TM : 15
 }
 {
@@ -242,6 +283,8 @@
 }
 {
   name : "Rain Dance"
+  weather : RAIN
+  weatherchance : 100
   TM : 18
 }
 {
@@ -258,10 +301,12 @@
 }
 {
   name : "SolarBeam"
+  type : Grass
   TM : 22
 }
 {
   name : "Smack Down"
+  type : Rock
   TM : 23
 }
 {
@@ -276,18 +321,22 @@
 }
 {
   name : "Earthquake"
+  type : Ground
   TM : 26
 }
 {
   name : "Return"
+  type : Normal
   TM : 27
 }
 {
   name : "Dig"
+  type : Ground
   TM : 28
 }
 {
   name : "Psychic"
+  type : Psychic
   TM : 29
 }
 {
