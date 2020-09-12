@@ -44,7 +44,7 @@ private:
 class Individual : public Pokemon {
     public:
     Individual(vector<string> info);
-    Individual(Pokemon spec, int min, int max);
+  //  Individual(Pokemon spec, int min, int max);
     Individual();
     //Individual(Individual &old);
 

@@ -62,9 +62,9 @@ void Pokemon::printPkmnData() {
 	printf("#%d: %s the %s Pokemon\n", idNum, name.c_str(), species.c_str());
 }
 //USAGE: Create random individual of pokemon species
-Individual::Individual(Pokemon spec, int min, int max) {
+/*Individual::Individual(Pokemon spec, int min, int max) {
 
-}
+}*/
 void Individual::heal(int healnum) {
 	currHealth+=healnum;
 	if(currHealth > maxHealth) {
