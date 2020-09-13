@@ -1,5 +1,5 @@
 #include "pkmn.h"
-
+#include <math.h>
 Pokemon::Pokemon(const map<string,vector<string> >& facts) {
 	map<string,vector<string> >::const_iterator itr = facts.begin();
 	//read in the map and grab variables if they exist
@@ -58,6 +58,9 @@ Pokemon::Pokemon(const map<string,vector<string> >& facts) {
 Pokemon::Pokemon() {
 
 }
+int Pokemon::getBaseStat(Stat s) {
+	return baseStats[s];
+}
 void Pokemon::printPkmnData() {
 	printf("#%d: %s the %s Pokemon\n", idNum, name.c_str(), species.c_str());
 }
@@ -65,6 +68,21 @@ void Pokemon::printPkmnData() {
 /*Individual::Individual(Pokemon spec, int min, int max) {
 
 }*/
+int stat_helper(int value,Stat curr, Stat p, Stat m) {
+	if (curr==p) {
+		return floor(value*1.1);
+	} else if (curr==m) {
+		return floor(value*0.9);
+	}
+	return value;
+}
+void Individual::calculateStats() {
+	int partial;
+	currStats[HP] = floor(((2*getBaseStat(HP)+ivs[HP]+(evs[HP]/4))*level)/100)+level+10;
+	partial = floor(((2*getBaseStat(ATTACK)+ivs[ATTACK]+(evs[ATTACK]/4))*level)/100)+5;
+	currStats[ATTACK] = stat_helper(partial,ATTACK,nature.plus,nature.minus);
+
+}
 void Individual::heal(int healnum) {
 	currHealth+=healnum;
 	if(currHealth > maxHealth) {

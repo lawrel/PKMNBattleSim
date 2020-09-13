@@ -11,6 +11,7 @@ class Pokemon {
         Type getType1() {return type1;};
         Type getType2() {return type2;};
         void printPkmnData();
+        int getBaseStat(Stat s);
 
     int EvolvesFrom;
     int EvolvesTo;
@@ -49,6 +50,7 @@ class Individual : public Pokemon {
     //Individual(Individual &old);
 
     string getName() {return nname;}
+    void calculateStats();
     void nickname(string newName) {nname = newName;}
     int getCurrHealth() { return currHealth;}
     bool BreedCheck(Individual mate);

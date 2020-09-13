@@ -159,7 +159,6 @@ class Nature {
     string name;
     string likes;
     string dislikes;
-  private:
     Natures id;
     Stat plus;
     Stat minus;
