@@ -1,0 +1,642 @@
+{
+  name : "Struggle"
+  power : 50
+  accuracy : 999
+  type : ???
+  atktype : physical
+  description : "This attack is used in desperation only if the user has no PP. It also damages the user a little."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0.50
+  PP : 999
+  TM : 0
+}
+{
+  name : "Tackle"
+  power : 40
+  accuracy : 100
+  type : Normal
+  atktype : physical
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 35
+  TM : 0
+}
+{
+  name : "Agility"
+  power : 0
+  accuracy : 999
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 2 0 0 ]
+  modchance : 100
+  target : self
+  recoil : 0
+  PP : 30
+  TM : 0
+}
+{
+ name : "Hone Claws"
+ power : 0
+ accuracy : 999
+ type : Dark
+ atktype : status
+ description : "The user sharpens its claws to boost its Attack stat and accuracy."
+ effect : OK
+ effectchance : 0
+ weather : CLEAR
+ weatherchance : 0
+ statmods : [ 0 1 0 0 0 0 0 1 ]
+ modchance : 100
+ target : self
+ recoil : 0
+ PP : 15
+ TM : 1
+ contact : 0
+}
+{
+  name : "Dragon Claw"
+  power : 80
+  accuracy : 100
+  type : Dragon
+  atktype : physical
+  description : "The user slashes the target with huge, sharp claws. "
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 15
+  TM : 2
+  contact : 1
+}
+{
+  name : "Psyshock"
+  power : 80
+  accuracy : 100
+  type : Psychic
+  atktype : special
+  description : "The user materializes an odd psychic wave to attack the target. This attack does physical damage. "
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  PP : 10
+  TM : 3
+  contact : 0
+}
+{
+  name : "Calm Mind"
+  power : 0
+  accuracy : 999
+  type : Psychic
+  atktype : special
+  description : "The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats. "
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 1 1 0 0 0 ]
+  modchance : 100
+  target : self
+  PP : 20
+  TM : 4
+  contact : 0
+  priority: 0
+}
+{
+  name : "Roar"
+  power : 0
+  accuracy : 999
+  type : Normal
+  atktype : status
+  description : "The target is scared off and replaced by another Pokémon in its party. In the wild, the battle ends. "
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  PP : 20
+  TM : 5
+  contact : 0
+  priority : -6
+}
+{
+ name : "Toxic"
+ power : 0
+ accuracy : 90
+ type : Poison
+ atktype : status
+ description : "The target is scared off and replaced by another Pokémon in its party. In the wild, the battle ends. "
+ effect : BADPOISON
+ effectchance : 100
+ weather : CLEAR
+ weatherchance : 0
+ statmods : [ 0 0 0 0 0 0 0 0 ]
+ modchance : 0
+ target : opponent
+ PP : 10
+ TM : 6
+ contact : 0
+ priority : 0
+}
+{
+  name : "Hail"
+  TM : 7
+}
+{
+  name : "Bulk Up"
+  TM : 8
+}
+{
+  name : "Venoshock"
+  TM : 9
+}
+{
+  name : "Hidden Power"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 10
+}
+{
+  name : "Sunny Day"
+  TM : 11
+}
+{
+  name : "Taunt"
+  TM : 12
+}
+{
+  name : "Ice Beam"
+  TM : 13
+}
+{
+  name : "Blizzard"
+  TM : 14
+}
+{
+  name : "Hyper Beam"
+  TM : 15
+}
+{
+  name : "Light Screen"
+  TM : 16
+}
+{
+  name : "Protect"
+  TM : 17
+}
+{
+  name : "Rain Dance"
+  TM : 18
+}
+{
+  name : "Telekinesis"
+  TM : 19
+}
+{
+  name : "Safegaurd"
+  TM : 20
+}
+{
+  name : "Frustration"
+  TM : 21
+}
+{
+  name : "SolarBeam"
+  TM : 22
+}
+{
+  name : "Smack Down"
+  TM : 23
+}
+{
+  name : "Thunderbolt"
+  type : Electric
+  TM : 24
+}
+{
+  name : "Thunder"
+  type : Electric
+  TM : 25
+}
+{
+  name : "Earthquake"
+  TM : 26
+}
+{
+  name : "Return"
+  TM : 27
+}
+{
+  name : "Dig"
+  TM : 28
+}
+{
+  name : "Psychic"
+  TM : 29
+}
+{
+  name : "Shadow Ball"
+  type : Ghost
+  TM : 30
+}
+{
+  name : "Brick Break"
+  type : Fighting
+  TM : 31
+}
+{
+  name : "Double Team"
+  type : Normal
+  TM : 32
+}
+{
+  name : "Reflect"
+  type : Psychic
+  TM : 33
+}
+{
+  name : "Sludge Wave"
+  type : Poison
+  TM : 34
+}
+{
+  name : "Flamethrower"
+  type : Fire
+  TM : 35
+}
+{
+  name : "Sludge Bomb"
+  type : Poison
+  TM : 36
+}
+{
+  name : "Sandstorm"
+  type : Rock
+  TM : 37
+}
+{
+  name : "Fire Blast"
+  type : Fire
+  TM : 38
+}
+{
+  name : "Rock Tomb"
+  type : Rock
+  TM : 39
+}
+{
+  name : "Aerial Ace"
+  type : Flying
+  TM : 40
+}
+{
+  name : "Torment"
+  type : Dark
+  TM : 41
+}
+{
+  name : "Facade"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 42
+}
+{
+  name : "Flame Charge"
+  type : Fire
+  TM : 43
+}
+{
+  name : "Rest"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 44
+}
+{
+  name : "Attract"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : INFATUATED
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 45
+}
+{
+  name : "Thief"
+  type : Dark
+  TM : 46
+}
+{
+  name : "Low Sweep"
+  type : Fighting
+  TM : 47
+}
+{
+  name : "Round"
+  type : Normal
+  TM : 48
+}
+{
+  name : "Echoed Voice"
+  type : Normal
+  TM : 49
+}
+{
+  name : "Overheat"
+  type : Fire
+  TM : 50
+}
+{
+  name : "Ally Switch"
+  type : Psychic
+  TM : 51
+}
+{
+  name : "Focus Blast"
+  type : Fighting
+  TM : 52
+}
+{
+  name : "Energy Ball"
+  type : Grass
+  TM : 53
+}
+{
+  name : "False Swipe"
+  type : Normal
+  TM : 54
+}
+{
+  name : "Scald"
+  type : Water
+  TM : 55
+}
+{
+  name : "Fling"
+  type : Dark
+  TM : 56
+}
+{
+  name : "Charge Beam"
+  type : Electric
+  TM : 57
+}
+{
+  name : "Sky Drop"
+  type : Flying
+  TM : 58
+}
+{
+  name : "Incinerate"
+  type : Fire
+  TM : 59
+}
+{
+  name : "Quash"
+  type : Dark
+  TM : 60
+}
+{
+  name : "Will-O-Wisp"
+  type : Fire
+  TM : 61
+}
+{
+  name : "Acrobatics"
+  type : Flying
+  TM : 62
+}
+{
+  name : "Embargo"
+  type : Dark
+  TM : 63
+}
+{
+  name : "Explosion"
+  type : Normal
+  TM : 64
+}
+{
+  name : "Shadow Claw"
+  type : Ghost
+  TM : 65
+}
+{
+  name : "Payback"
+  type : Dark
+  TM : 66
+}
+{
+  name : "Retaliate"
+  type : Normal
+  TM : 67
+}
+{
+  name : "Giga Impact"
+  type : Normal
+  TM : 68
+}
+{
+  name : "Rock Polish"
+  type : Rock
+  TM : 69
+}
+{
+  name : "Flash"
+  type : Normal
+  TM : 70
+}
+{
+  name : "Stone Edge"
+  type : Rock
+  TM : 71
+}
+{
+  name : "Volt Switch"
+  type : Electric
+  TM : 72
+}
+{
+  name : "Thunder Wave"
+  type : Electric
+  TM : 73
+}
+{
+  name : "Gyro Ball"
+  type : Steel
+  TM : 74
+}
+{
+  name : "Swords Dance"
+  type : Normal
+  TM : 75
+}
+{
+  name : "Struggle Bug"
+  type : Bug
+  TM : 76
+}
+{
+  name : "Psych Up"
+  type : Normal
+  TM : 77
+}
+{
+  name : "Bulldoze"
+  type : Ground
+  TM : 78
+}
+{
+  name : "Frost Breath"
+  type : Ice
+  TM : 79
+}
+{
+  name : "Rock Slide"
+  type : Rock
+  TM : 80
+}
+{
+  name : "X-Scissor"
+  type : Bug
+  TM : 81
+}
+{
+  name : "Dragon Tail"
+  type : Dragon
+  TM : 82
+}
+{
+  name : "Work Up"
+  type : Normal
+  TM : 83
+}
+{
+  name : "Pluck"
+  type : Flying
+  TM : 84
+}
+{
+  name : "U-turn"
+  type: Bug
+  TM : 89
+}
+{
+  name : "Substitute"
+  type : Normal
+  TM : 90
+}
+{
+  name : "Flash Cannon"
+  type : Steel
+  TM : 91
+}
+{
+  name : "Trick Room"
+  type : Psychic
+  TM : 92
+}
+{
+  name : "Wild Charge"
+  type : Electric
+  TM : 93
+}
+{
+  name : "Rock Smash"
+  type : Fighting
+  TM : 94
+}
+{
+  name : "Snarl"
+  type : Dark
+  TM : 95
+}
+{
+  name : "Confide"
+  power : 0
+  accuracy : 100
+  type : Normal
+  atktype : status
+  description : "A physical attack in which the user charges and slams into the foe with their whole body."
+  effect : OK
+  effectchance : 0
+  weather : CLEAR
+  weatherchance : 0
+  statmods : [ 0 0 0 0 0 0 0 0 ]
+  modchance : 0
+  target : opponent
+  recoil : 0
+  PP : 30
+  TM : 100
+}
